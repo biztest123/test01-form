@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テストLP - タグ運用トレーニング用</title>
+
+<!-- ▼▼▼ ここにGTMの1つ目のコード（<head>用スニペット）を貼り付け ▼▼▼ -->
+
+
+<!-- ▲▲▲ ここまで ▲▲▲ -->
+
+<style>
+  body { font-family: -apple-system, "Hiragino Sans", sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; line-height: 1.8; color:#222; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 18px; margin-top: 0; }
+  .cta { display: inline-block; background:#1a73e8; color:#fff; padding:14px 28px; border-radius:6px; text-decoration:none; margin-top:24px; }
+  form { margin-top: 50px; border-top:1px solid #ddd; padding-top:30px; }
+  input { display:block; width:100%; padding:10px; margin-bottom:12px; box-sizing:border-box; border:1px solid #ccc; border-radius:4px; }
+  button { padding:10px 24px; background:#1a73e8; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+  .note { font-size:13px; color:#888; margin-top:60px; }
+</style>
+</head>
+<body>
+
+<!-- dataLayerが存在しない状態でもボタン/フォームの動作確認ができるようにする保険 -->
+<script>window.dataLayer = window.dataLayer || [];</script>
+
+<!-- ▼▼▼ ここにGTMの2つ目のコード（<body>直後のnoscriptスニペット）を貼り付け ▼▼▼ -->
+
+
+<!-- ▲▲▲ ここまで ▲▲▲ -->
+
+<h1>これはタグ運用練習用のテストページです</h1>
+<p>GA4・GTM・広告タグの発火確認、コンバージョン計測の練習のために作成したページです。</p>
+
+<a href="#form" class="cta" id="cta-button" onclick="dataLayer.push({'event':'cta_click'});">
+  無料相談に申し込む（テスト用ボタン）
+</a>
+
+<form id="form" onsubmit="dataLayer.push({'event':'form_submit'}); alert('送信されました（テスト用フォームです。実際には送信されません）'); return false;">
+  <h2>お問い合わせフォーム（テスト用）</h2>
+  <input type="text" placeholder="お名前" required>
+  <input type="email" placeholder="メールアドレス" required>
+  <button type="submit">送信する</button>
+</form>
+
+<p class="note">※このページは実務トレーニング目的のテストページです。</p>
+
+</body>
+</html>
